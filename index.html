@@ -8,5 +8,19 @@
    <body>
       <h1>About my App 🎙</h1>
       <p>Thanks for following this tutorial. 🙏</p>
+
+<script>
+navigator.permissions.query({ name: "geolocation" }).then((result) => {
+  if (result.state === "granted") {
+    showMap();
+  } else if (result.state === "prompt") {
+    showButtonToEnableMap();
+  }
+  // Don't do anything if the permission was denied.
+});
+
+</script>
+
+
    </body>
 </html>
