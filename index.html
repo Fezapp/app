@@ -12,9 +12,9 @@
 <script>
 navigator.permissions.query({ name: "geolocation" }).then((result) => {
   if (result.state === "granted") {
-    showMap();
+    alert('grant')
   } else if (result.state === "prompt") {
-    showButtonToEnableMap();
+    alert('prompt')
   }
   // Don't do anything if the permission was denied.
 });
